@@ -7,7 +7,7 @@ import LyricList from './LyricList';
 
 class SongDetail extends Component {
   render() {
-    const {song} = this.props.data;
+    const { song } = this.props.data;
 
     if (!song) {
       return (
@@ -19,7 +19,7 @@ class SongDetail extends Component {
       <div>
         <Link to={'/'}>Back</Link>
         <h3>{song.title}</h3>
-        <LyricList/>
+        <LyricList lyrics={song.lyrics}/>
         <LyricCreate songId={this.props.params.id}/>
       </div>
     );
